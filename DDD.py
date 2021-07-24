@@ -6,6 +6,8 @@ def inCode ():
     for char in text:
 
         if char.isupper():
+            if not char.isalpha ():
+                continue
             charIndex = ord(char) - ord('A')
             charShift = (charIndex + key) % 26 + ord('A')
             charNew = chr(charShift)
